@@ -12,6 +12,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.0.4"
+    "@astrojs/check": "^0.9.7",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.4",
+    "astro-i18n": "^2.2.4",
+    "tailwindcss": "^4.2.1"
   }
 }
