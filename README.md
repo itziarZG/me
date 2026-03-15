@@ -1,43 +1,86 @@
-# Astro Starter Kit: Minimal
+# Personal Portfolio
 
-```sh
-pnpm create astro@latest -- --template minimal
+A framework-free, static portfolio website built with vanilla HTML, CSS, and JavaScript.
+
+## Features
+
+- **Zero Runtime Dependencies**: No JavaScript framework required
+- **Multi-language Support**: English and Spanish with instant switching
+- **Dark/Light Mode**: Theme persistence with localStorage
+- **Glassmorphism Design**: Modern UI with blur effects and transparency
+- **Fully Responsive**: Works on all devices
+- **SEO Optimized**: Semantic HTML5 markup
+- **Fast Loading**: Minimal bundle size
+
+## Tech Stack
+
+- **HTML5**: Semantic markup
+- **CSS3**: Custom properties, flexbox, grid, animations
+- **Vanilla JavaScript**: ES6+ modules, classes, localStorage
+- **Google Fonts**: Space Grotesk typography
+- **Material Symbols**: Icon system
+
+## Development
+
+### Prerequisites
+
+- Node.js (for dev server only)
+- Any modern web browser
+
+### Setup
+
+```bash
+# Install dev dependencies (optional)
+npm install
+
+# Start development server
+npm run dev
+
+# Or simply open index.html in your browser
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Project Structure
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+├── index.html          # Main HTML file
+├── styles/
+│   └── main.css        # Complete stylesheet
+├── js/
+│   └── main.js         # JavaScript functionality
+├── public/             # Static assets
+└── package.json        # Dev dependencies only
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Features Implementation
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Language Switching
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Translations stored in JavaScript objects
+- No page reload required
+- Preference saved in localStorage
+- Dynamic content rendering
 
-## 🧞 Commands
+### Theme Toggle
 
-All commands are run from the root of the project, from a terminal:
+- CSS custom properties for theming
+- System preference detection
+- Smooth transitions
+- Icon updates based on current theme
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+### Performance
 
-## 👀 Want to learn more?
+- No build step required
+- Minimal HTTP requests
+- Optimized CSS with custom properties
+- Efficient DOM manipulation
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Browser Support
+
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+
+## License
+
+MIT
