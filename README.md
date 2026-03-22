@@ -33,10 +33,10 @@ python -m http.server 8000
 ## Project Structure
 
 ```
-├── index.html          # Main portfolio page
+├── index.html          # Main portfolio page (loads CSS and JS)
+├── css/                # Site-wide styles (e.g., styles.css)
+├── js/                 # Site scripts (e.g., main.js)
 ├── diseño/             # Original design files from Stitch
-├── js/                 # Legacy JS files (not currently used)
-├── styles/             # Legacy CSS files (not currently used)
 └── README.md           # This file
 ```
 
