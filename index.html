@@ -204,7 +204,9 @@
             <div
               class="absolute inset-0 bg-cover bg-center"
               data-alt="Abstract soft purple and pink liquid gradients flowing"
-              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7jcnN_wxvIYoIUzW4qcK4CoDUZZZNjygy4of13sQuWzPdhmFyLBcD-uo94oXDghcnd1bXI9F8yApHPlBJmTsrsoHrDT7H4NcX0Qv3QSCb8qwZgJV6iPJuI1LjVxfxuJBeaAy9X3nHgeacqLeAJkbb0DQg9-LxVDUdgZUABcx65AW1k59FXjFiuf2K2BAop_ki74vQZC0gsddWQbM6TmU--QLahcLkY54YobaPZeL_Fgh0veydf7Wh7pKAT4s6RFcMDKH0w4Ova98')"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD7jcnN_wxvIYoIUzW4qcK4CoDUZZZNjygy4of13sQuWzPdhmFyLBcD-uo94oXDghcnd1bXI9F8yApHPlBJmTsrsoHrDT7H4NcX0Qv3QSCb8qwZgJV6iPJuI1LjVxfxuJBeaAy9X3nHgeacqLeAJkbb0DQg9-LxVDUdgZUABcx65AW1k59FXjFiuf2K2BAop_ki74vQZC0gsddWQbM6TmU--QLahcLkY54YobaPZeL_Fgh0veydf7Wh7pKAT4s6RFcMDKH0w4Ova98&quot;);
+              "
             ></div>
             <div
               class="absolute inset-0 bg-gradient-to-t from-background-light/80 dark:from-background-dark/80 to-transparent"
@@ -216,18 +218,19 @@
         <section class="py-24 bg-white/30 dark:bg-white/5" id="about">
           <div class="mx-auto max-w-6xl px-6">
             <div class="max-w-3xl">
-              <h2 class="text-4xl font-serif italic mb-6 text-slate-900 dark:text-white">
+              <h2
+                class="text-4xl font-serif italic mb-6 text-slate-900 dark:text-white"
+              >
                 Sobre mí
               </h2>
               <p
                 class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8"
               >
                 Ingeniera de telecomunicaciones y desarrolladora especializada
-                en automatización de procesos, integración de APIs y creación
-                de agentes basados en inteligencia artificial. Construyo
-                sistemas que conectan herramientas, procesan información
-                (texto, audio, vídeo) y crean flujos automatizados que reducen
-                trabajo manual.
+                en automatización de procesos, integración de APIs y creación de
+                agentes basados en inteligencia artificial. Construyo sistemas
+                que conectan herramientas, procesan información (texto, audio,
+                vídeo) y crean flujos automatizados que reducen trabajo manual.
               </p>
               <div class="grid md:grid-cols-2 gap-4 mt-12">
                 <div class="p-6 glass rounded-2xl">
@@ -281,9 +284,13 @@
         <!-- Selected Works Section -->
         <section class="py-24" id="projects">
           <div class="mx-auto max-w-6xl px-6">
-            <div class="flex justify-between items-end mb-16 flex-col md:flex-row gap-4">
+            <div
+              class="flex justify-between items-end mb-16 flex-col md:flex-row gap-4"
+            >
               <div>
-                <h2 class="text-5xl font-serif italic mb-4 text-slate-900 dark:text-white">
+                <h2
+                  class="text-5xl font-serif italic mb-4 text-slate-900 dark:text-white"
+                >
                   Selected Works
                 </h2>
                 <p class="text-slate-500 dark:text-slate-400">
@@ -313,7 +320,9 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                  <h3
+                    class="text-xl font-bold mb-2 text-slate-900 dark:text-white"
+                  >
                     AI Knowledge Pipeline
                   </h3>
                   <p
@@ -323,7 +332,7 @@
                     texto. Transcribe el contenido, lo resume mediante IA y lo
                     almacena estructuradamente para su reutilización.
                   </p>
-                  <div class="flex gap-2 flex-wrap">
+                  <div class="flex gap-2 flex-wrap mb-4">
                     <span
                       class="px-3 py-1 bg-primary/10 rounded-full text-[10px] font-bold text-primary uppercase"
                       >n8n</span
@@ -337,6 +346,12 @@
                       >APIs IA</span
                     >
                   </div>
+                  <button
+                    class="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg font-bold text-sm transition-colors"
+                    onclick="openModal('project-1')"
+                  >
+                    Ver detalles
+                  </button>
                 </div>
               </div>
 
@@ -355,7 +370,9 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                  <h3
+                    class="text-xl font-bold mb-2 text-slate-900 dark:text-white"
+                  >
                     ChefGPT
                   </h3>
                   <p
@@ -365,7 +382,7 @@
                     ingredientes disponibles. Integra Telegram, Google Sheets y
                     n8n para automatizar consultas de inventario.
                   </p>
-                  <div class="flex gap-2 flex-wrap">
+                  <div class="flex gap-2 flex-wrap mb-4">
                     <span
                       class="px-3 py-1 bg-primary/10 rounded-full text-[10px] font-bold text-primary uppercase"
                       >Telegram</span
@@ -379,6 +396,12 @@
                       >n8n</span
                     >
                   </div>
+                  <button
+                    class="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg font-bold text-sm transition-colors"
+                    onclick="openModal('project-2')"
+                  >
+                    Ver detalles
+                  </button>
                 </div>
               </div>
 
@@ -397,7 +420,9 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                  <h3
+                    class="text-xl font-bold mb-2 text-slate-900 dark:text-white"
+                  >
                     Content Processing Automation
                   </h3>
                   <p
@@ -407,7 +432,7 @@
                     (audio, PDFs, vídeos, texto) que genera transcripciones,
                     resúmenes y conocimiento estructurado.
                   </p>
-                  <div class="flex gap-2 flex-wrap">
+                  <div class="flex gap-2 flex-wrap mb-4">
                     <span
                       class="px-3 py-1 bg-primary/10 rounded-full text-[10px] font-bold text-primary uppercase"
                       >Workflow</span
@@ -421,6 +446,12 @@
                       >LLMs</span
                     >
                   </div>
+                  <button
+                    class="w-full bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg font-bold text-sm transition-colors"
+                    onclick="openModal('project-3')"
+                  >
+                    Ver detalles
+                  </button>
                 </div>
               </div>
             </div>
@@ -433,7 +464,9 @@
             class="absolute inset-0 bg-primary/[0.03] dark:bg-primary/[0.02] skew-y-3 -z-10"
           ></div>
           <div class="mx-auto max-w-4xl px-6 text-center">
-            <h2 class="text-4xl font-serif italic mb-16 text-slate-900 dark:text-white">
+            <h2
+              class="text-4xl font-serif italic mb-16 text-slate-900 dark:text-white"
+            >
               Tech Curated Stack
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -451,7 +484,9 @@
                 <div
                   class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
-                  <span class="material-symbols-outlined text-3xl">terminal</span>
+                  <span class="material-symbols-outlined text-3xl"
+                    >terminal</span
+                  >
                 </div>
                 <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Next.js</span
@@ -483,7 +518,9 @@
                 <div
                   class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
-                  <span class="material-symbols-outlined text-3xl">database</span>
+                  <span class="material-symbols-outlined text-3xl"
+                    >database</span
+                  >
                 </div>
                 <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Supabase</span
@@ -503,7 +540,9 @@
                 <div
                   class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
-                  <span class="material-symbols-outlined text-3xl">palette</span>
+                  <span class="material-symbols-outlined text-3xl"
+                    >palette</span
+                  >
                 </div>
                 <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Tailwind CSS</span
@@ -546,10 +585,12 @@
                 Estoy siempre abierta a colaborar en proyectos que desafíen los
                 límites de lo posible con IA y automatización.
               </p>
-              <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
+              <div
+                class="flex flex-col md:flex-row justify-center gap-6 relative z-10"
+              >
                 <a
                   class="bg-slate-900 dark:bg-slate-800 text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 dark:hover:bg-slate-700 transition-colors shadow-2xl"
-                  href="mailto:itziar@example.com"
+                  href="mailto:itziar.zameza.garcia@gmail.com"
                 >
                   <span class="material-symbols-outlined">mail</span>
                   Enviar un Email
@@ -557,17 +598,19 @@
                 <div class="flex gap-4 justify-center">
                   <a
                     class="size-16 glass rounded-full flex items-center justify-center hover:text-primary transition-colors"
-                    href="#"
+                    href="https://www.linkedin.com/in/itziarzamezagarcia"
                     title="LinkedIn"
                   >
                     <span class="material-symbols-outlined text-2xl">link</span>
                   </a>
                   <a
                     class="size-16 glass rounded-full flex items-center justify-center hover:text-primary transition-colors"
-                    href="#"
+                    href="https://github.com/itziarZG"
                     title="GitHub"
                   >
-                    <span class="material-symbols-outlined text-2xl">share</span>
+                    <span class="material-symbols-outlined text-2xl"
+                      >share</span
+                    >
                   </a>
                 </div>
               </div>
@@ -575,22 +618,333 @@
             <div
               class="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 dark:text-slate-500 text-sm"
             >
-              <p>© 2024 Itziar ZG. Hecho con IA y mucho café.</p>
+              <p>© 2025 Itziar ZG. Hecho con IA y mucho café.</p>
               <div class="flex gap-8">
                 <a
                   class="hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
-                  href="#"
+                  href="https://www.linkedin.com/in/itziarzamezagarcia"
                   >LinkedIn</a
                 >
                 <a
                   class="hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
-                  href="#"
+                  href="https://github.com/itziarZG"
                   >GitHub</a
                 >
               </div>
             </div>
+           </div>
+         </footer>
+       </div>
+     </div>
+
+    <!-- Project Modals -->
+    <!-- Modal 1: AI Knowledge Pipeline -->
+    <div
+      id="project-1-modal"
+      class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      onclick="closeModal('project-1')"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto glass border border-white/20"
+        onclick="event.stopPropagation()"
+      >
+        <div class="p-8 md:p-12">
+          <div class="flex justify-between items-start mb-6">
+            <h2
+              class="text-3xl font-serif italic text-slate-900 dark:text-white"
+            >
+              AI Knowledge Pipeline
+            </h2>
+            <button
+              class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+              onclick="closeModal('project-1')"
+            >
+              ✕
+            </button>
           </div>
-        </footer>
+
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8RWItHd5HSWHY1TZGhviEiYL0nH49aw4shoKawpqU6-sXM8PS5yl17suDdKzrYINIOcJ6UMBjTl-c66Ul8JUBHK9PNN0cXxr_1selPrAOi0plM8CipkLw1D-0QUKa05GZg7AzHFCCYWLdicp0_M6TMYPWiEu7cdxASk_G9GTfhUXkNQKjFA0qrxqtqdDAzG-gpLV-XOs7L3hELHIUam_iE_0w4i5DNlONlsACvbS5kTTDB7FOFb7SAMKe0VH_9c5J3F0eQyyjokw"
+            alt="AI Knowledge Pipeline"
+            class="w-full rounded-2xl mb-6 object-cover h-64"
+          />
+
+          <div class="space-y-4 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Descripción
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                Sistema de ingesta y procesamiento inteligente de contenido
+                multimedia. Recibe audio, PDFs, vídeos y texto. Utiliza modelos
+                de IA para transcribir, resumir y extraer información clave,
+                almacenando todo en Supabase de forma estructurada para
+                reutilización posterior.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Funcionalidades
+              </h3>
+              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+                <li>Ingestión de múltiples tipos de contenido</li>
+                <li>Transcripción automática con IA</li>
+                <li>Resumen inteligente y extracción de keywords</li>
+                <li>Almacenamiento vectorial para búsqueda semántica</li>
+                <li>Pipeline automatizado con n8n</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Stack Tecnológico
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >n8n</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Supabase (PostgreSQL + pgvector)</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >OpenAI API</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Whisper (transcripción)</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Resultado
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300">
+                Pipeline completamente automatizado que reduce el tiempo de
+                procesamiento de contenido en un 85% y permite reutilizar
+                información de forma inteligente mediante búsquedas semánticas.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
+            onclick="closeModal('project-1')"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: ChefGPT -->
+    <div
+      id="project-2-modal"
+      class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      onclick="closeModal('project-2')"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto glass border border-white/20"
+        onclick="event.stopPropagation()"
+      >
+        <div class="p-8 md:p-12">
+          <div class="flex justify-between items-start mb-6">
+            <h2
+              class="text-3xl font-serif italic text-slate-900 dark:text-white"
+            >
+              ChefGPT
+            </h2>
+            <button
+              class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+              onclick="closeModal('project-2')"
+            >
+              ✕
+            </button>
+          </div>
+
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfqsuP4x2xr1tNEyjnxJ4D517oj2e5uvU9_41GuMiygljVgzuSLFs-teeZfNDCD7jP8ShaU_Vgc_L0qzjAtd5I-8-oVtoxi8ih81LLt3l5IM6-RvPCVAuoIx9jK7q9SvAcvet8d5Fg9YQCndNdiKbWHXgyEkD9ARj0x7EAdyzsGThzWbcVHof2YHZjw3aXpVV7sq0YrQqsQ07WON23OSALCIHo6W80FBSEUydUs6yvDyEoT-XJlLHO_xKX4xS8J4x38c1nhEDIuiw"
+            alt="ChefGPT"
+            class="w-full rounded-2xl mb-6 object-cover h-64"
+          />
+
+          <div class="space-y-4 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Descripción
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                Agente conversacional inteligente en Telegram que actúa como
+                asistente culinario personal. Consulta tu inventario en Google
+                Sheets, entiende tus preferencias dietéticas y sugiere recetas
+                personalizadas basadas en lo que tienes disponible.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Funcionalidades
+              </h3>
+              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+                <li>Integración bidireccional con Google Sheets</li>
+                <li>Consulta automática de inventario</li>
+                <li>Generación de recetas personalizadas con IA</li>
+                <li>Actualización automática del inventario</li>
+                <li>Conversación natural y contextual</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Stack Tecnológico
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Telegram Bot API</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Google Sheets API</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >n8n</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >OpenAI GPT</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Resultado
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300">
+                Asistente culinario que elimina la decisión de "qué cocinar",
+                aprendiendo preferencias y generando sugerencias en tiempo real
+                basadas en disponibilidad real del inventario.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
+            onclick="closeModal('project-2')"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Content Processing Automation -->
+    <div
+      id="project-3-modal"
+      class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      onclick="closeModal('project-3')"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto glass border border-white/20"
+        onclick="event.stopPropagation()"
+      >
+        <div class="p-8 md:p-12">
+          <div class="flex justify-between items-start mb-6">
+            <h2
+              class="text-3xl font-serif italic text-slate-900 dark:text-white"
+            >
+              Content Processing Automation
+            </h2>
+            <button
+              class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+              onclick="closeModal('project-3')"
+            >
+              ✕
+            </button>
+          </div>
+
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9zdk9-QnIcGhOgx3FS680JDa-ouDfdurPEV9qAqxu8XVNEqDFe6lg9rGCeof4iPKxENJpJZWCzvn1JauqOrn67WDSYwxD2rHpU_aBWw-2YvoFbuoa4CGp8_1ZGk9LtnLIenHtt1GFoN5fGyTSf3leg6-rbmrueHVrPqu_7M2cp2u0VRFlWSbe8k9kCmk5p6kq4ypMsY-m7QX5SUbvR3JXfWvFKi6mPWF__c2_NPGKAlBwNcfm5MKcbUR4y0XP5YfzIu6yvKP8YA"
+            alt="Content Processing Automation"
+            class="w-full rounded-2xl mb-6 object-cover h-64"
+          />
+
+          <div class="space-y-4 mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Descripción
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                Pipeline integral de procesamiento de contenido multimedia que
+                automatiza desde la ingesta hasta la distribución. Transforma
+                múltiples formatos (audio, vídeo, PDFs, texto) en contenido
+                estructurado y lista para publicación en redes sociales.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Funcionalidades
+              </h3>
+              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+                <li>Procesamiento de múltiples formatos multimedia</li>
+                <li>Transcripción y análisis automático</li>
+                <li>Generación de títulos, descripciones y hashtags con IA</li>
+                <li>Redimensionamiento y optimización de imágenes</li>
+                <li>Publicación automática en redes sociales</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                Stack Tecnológico
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Workflow Automation</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >FFmpeg (vídeo)</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >OpenAI API</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >Social Media APIs</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                Resultado
+              </h3>
+              <p class="text-slate-700 dark:text-slate-300">
+                Automatización completa de la cadena de producción de
+                contenido, reduciendo tiempo manual en un 90% y garantizando
+                consistencia en la calidad y el formato de publicaciones.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-primary text-white py-3 rounded-xl font-bold hover:bg-primary/90 transition-colors"
+            onclick="closeModal('project-3')"
+          >
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
 
@@ -626,15 +980,45 @@
         }
       }
 
-      function scrollToContact() {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }
+       function scrollToContact() {
+         const contactSection = document.getElementById("contact");
+         if (contactSection) {
+           contactSection.scrollIntoView({ behavior: "smooth" });
+         }
+       }
 
-      // Initialize theme on page load
-      document.addEventListener("DOMContentLoaded", initTheme);
+       // Modal functions
+       function openModal(projectId) {
+         const modal = document.getElementById(projectId + "-modal");
+         if (modal) {
+           modal.classList.remove("hidden");
+           document.body.style.overflow = "hidden";
+         }
+       }
+
+       function closeModal(projectId) {
+         const modal = document.getElementById(projectId + "-modal");
+         if (modal) {
+           modal.classList.add("hidden");
+           document.body.style.overflow = "auto";
+         }
+       }
+
+       // Close modal with ESC key
+       document.addEventListener("keydown", function (event) {
+         if (event.key === "Escape") {
+           const modals = document.querySelectorAll(
+             '[id$="-modal"]:not(.hidden)'
+           );
+           modals.forEach((modal) => {
+             const projectId = modal.id.replace("-modal", "");
+             closeModal(projectId);
+           });
+         }
+       });
+
+       // Initialize theme on page load
+       document.addEventListener("DOMContentLoaded", initTheme);
     </script>
   </body>
 </html>
