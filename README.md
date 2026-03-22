@@ -1,85 +1,52 @@
-# Personal Portfolio
+# Personal Portfolio - Itziar ZG
 
-A framework-free, static portfolio website built with vanilla HTML, CSS, and JavaScript.
+A modern, static portfolio website for AI & Automation Developer. Built with HTML, Tailwind CSS, and minimal JavaScript.
 
 ## Features
 
-- **Zero Runtime Dependencies**: No JavaScript framework required
-- **Multi-language Support**: English and Spanish with instant switching
-- **Dark/Light Mode**: Theme persistence with localStorage
-- **Glassmorphism Design**: Modern UI with blur effects and transparency
-- **Fully Responsive**: Works on all devices
+- **Modern Design**: Glassmorphism, gradients, fluid animations
+- **Responsive**: Mobile-first design with Tailwind CSS
+- **Fast Loading**: No build step, CDN-powered Tailwind
 - **SEO Optimized**: Semantic HTML5 markup
-- **Fast Loading**: Minimal bundle size
+- **Smooth Navigation**: Scroll-to-section anchors
+- **Professional Layout**: Hero, About, Projects, Tech Stack, Contact sections
 
 ## Tech Stack
 
 - **HTML5**: Semantic markup
-- **CSS3**: Custom properties, flexbox, grid, animations
-- **Vanilla JavaScript**: ES6+ modules, classes, localStorage
-- **Google Fonts**: Space Grotesk typography
+- **Tailwind CSS**: Utility-first styling via CDN
+- **Vanilla JavaScript**: Smooth scrolling, minimal interactions
+- **Google Fonts**: Space Grotesk & Instrument Serif
 - **Material Symbols**: Icon system
 
-## Development
 
-### Prerequisites
+## Getting Started
 
-- Node.js (for dev server only)
-- Any modern web browser
-
-### Setup
+Simply open `index.html` in your browser. No build step required.
 
 ```bash
-# Install dev dependencies (optional)
-npm install
-
-# Start development server
-npm run dev
-
-# Or simply open index.html in your browser
+# Or use a local server
+python -m http.server 8000
+# Then visit http://localhost:8000
 ```
 
-### Project Structure
+## Project Structure
 
 ```
-├── index.html          # Main HTML file
-├── styles/
-│   └── main.css        # Complete stylesheet
-├── js/
-│   └── main.js         # JavaScript functionality
-├── public/             # Static assets
-└── package.json        # Dev dependencies only
+├── index.html          # Main portfolio page
+├── diseño/             # Original design files from Stitch
+├── js/                 # Legacy JS files (not currently used)
+├── styles/             # Legacy CSS files (not currently used)
+└── README.md           # This file
 ```
 
-## Features Implementation
+## Sections
 
-### Language Switching
-
-- Translations stored in JavaScript objects
-- No page reload required
-- Preference saved in localStorage
-- Dynamic content rendering
-
-### Theme Toggle
-
-- CSS custom properties for theming
-- System preference detection
-- Smooth transitions
-- Icon updates based on current theme
-
-### Performance
-
-- No build step required
-- Minimal HTTP requests
-- Optimized CSS with custom properties
-- Efficient DOM manipulation
-
-## Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
+- **Hero**: Attention-grabbing intro with CTA buttons
+- **About**: Professional background and capabilities
+- **Selected Works**: 3 featured projects with tech tags
+- **Tech Stack**: Technologies and tools used
+- **Contact**: Call-to-action footer with email and social links
 
 ## License
 
