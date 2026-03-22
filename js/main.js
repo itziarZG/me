@@ -102,6 +102,6 @@ document.addEventListener("keydown", function (event) {
 });
 
 /**
- * Initialize theme when DOM is ready
+ * Initialize theme as early as possible
  */
-document.addEventListener("DOMContentLoaded", initTheme);
+initTheme();
