@@ -44,6 +44,10 @@
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
+      .dark .glass {
+        background: rgba(30, 20, 40, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
       .iridescent-bg {
         background:
           radial-gradient(
@@ -68,7 +72,7 @@
     </style>
   </head>
   <body
-    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30"
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30 transition-colors duration-300"
   >
     <div class="relative min-h-screen overflow-hidden iridescent-bg">
       <!-- Floating Fluid Shapes -->
@@ -87,11 +91,13 @@
             <div
               class="size-10 bg-primary rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/20"
             >
-              <span class="material-symbols-outlined text-2xl"
-                >auto_awesome</span
-              >
+              <span class="material-symbols-outlined text-2xl">
+                auto_awesome
+              </span>
             </div>
-            <h2 class="text-xl font-bold tracking-tight font-serif italic">
+            <h2
+              class="text-xl font-bold tracking-tight font-serif italic text-slate-900 dark:text-white"
+            >
               Itziar ZG
             </h2>
           </div>
@@ -99,31 +105,49 @@
             class="hidden md:flex items-center gap-10 glass px-8 py-3 rounded-full"
           >
             <a
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors text-slate-700 dark:text-slate-300"
               href="#about"
               >Sobre mí</a
             >
             <a
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors text-slate-700 dark:text-slate-300"
               href="#projects"
               >Proyectos</a
             >
             <a
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors text-slate-700 dark:text-slate-300"
               href="#stack"
               >Tech Stack</a
             >
             <a
-              class="text-sm font-medium hover:text-primary transition-colors"
+              class="text-sm font-medium hover:text-primary transition-colors text-slate-700 dark:text-slate-300"
               href="#contact"
               >Contacto</a
             >
           </nav>
-          <button
-            class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md shadow-primary/25"
-          >
-            Hablemos
-          </button>
+          <div class="flex items-center gap-4">
+            <button
+              class="size-10 flex items-center justify-center rounded-full glass hover:bg-white/60 dark:hover:bg-white/10 transition-colors"
+              id="theme-toggle"
+              onclick="toggleTheme()"
+              aria-label="Toggle theme"
+            >
+              <span class="material-symbols-outlined text-xl dark:hidden">
+                dark_mode
+              </span>
+              <span
+                class="material-symbols-outlined text-xl hidden dark:block text-yellow-200"
+              >
+                light_mode
+              </span>
+            </button>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-md shadow-primary/25"
+              onclick="scrollToContact()"
+            >
+              Hablemos
+            </button>
+          </div>
         </header>
 
         <!-- Hero Section -->
@@ -144,7 +168,7 @@
             Disponible para nuevos proyectos
           </div>
           <h1
-            class="text-6xl md:text-8xl font-serif italic leading-[1.1] text-slate-900 mb-6 max-w-4xl"
+            class="text-5xl md:text-8xl font-serif italic leading-[1.1] text-slate-900 dark:text-white mb-6 max-w-4xl"
           >
             Arquitecta de
             <span
@@ -154,7 +178,7 @@
             &amp; Automatización
           </h1>
           <p
-            class="text-lg md:text-xl text-slate-600 max-w-2xl mb-12 leading-relaxed"
+            class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mb-12 leading-relaxed"
           >
             Construyo automatizaciones y agentes de IA que conectan
             herramientas, procesan información y transforman flujos de trabajo
@@ -163,38 +187,41 @@
           <div class="flex flex-wrap justify-center gap-4">
             <button
               class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:translate-y-[-2px] transition-transform shadow-xl shadow-primary/30"
+              onclick="scrollToProjects()"
             >
               Explorar Proyectos
             </button>
             <button
-              class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/60 transition-colors"
+              class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/60 dark:hover:bg-white/10 transition-colors text-slate-800 dark:text-slate-200"
             >
               Descargar CV
             </button>
           </div>
           <!-- Abstract Decorative Hero Image -->
           <div
-            class="mt-20 w-full max-w-5xl aspect-[21/9] rounded-3xl overflow-hidden glass border-4 border-white/50 relative"
+            class="mt-20 w-full max-w-5xl aspect-[21/9] rounded-3xl overflow-hidden glass border-4 border-white/50 dark:border-white/20 relative"
           >
             <div
               class="absolute inset-0 bg-cover bg-center"
               data-alt="Abstract soft purple and pink liquid gradients flowing"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD7jcnN_wxvIYoIUzW4qcK4CoDUZZZNjygy4of13sQuWzPdhmFyLBcD-uo94oXDghcnd1bXI9F8yApHPlBJmTsrsoHrDT7H4NcX0Qv3QSCb8qwZgJV6iPJuI1LjVxfxuJBeaAy9X3nHgeacqLeAJkbb0DQg9-LxVDUdgZUABcx65AW1k59FXjFiuf2K2BAop_ki74vQZC0gsddWQbM6TmU--QLahcLkY54YobaPZeL_Fgh0veydf7Wh7pKAT4s6RFcMDKH0w4Ova98&quot;);
-              "
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7jcnN_wxvIYoIUzW4qcK4CoDUZZZNjygy4of13sQuWzPdhmFyLBcD-uo94oXDghcnd1bXI9F8yApHPlBJmTsrsoHrDT7H4NcX0Qv3QSCb8qwZgJV6iPJuI1LjVxfxuJBeaAy9X3nHgeacqLeAJkbb0DQg9-LxVDUdgZUABcx65AW1k59FXjFiuf2K2BAop_ki74vQZC0gsddWQbM6TmU--QLahcLkY54YobaPZeL_Fgh0veydf7Wh7pKAT4s6RFcMDKH0w4Ova98')"
             ></div>
             <div
-              class="absolute inset-0 bg-gradient-to-t from-background-light/80 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-background-light/80 dark:from-background-dark/80 to-transparent"
             ></div>
           </div>
         </main>
 
         <!-- About Section -->
-        <section class="py-24 bg-white/30" id="about">
+        <section class="py-24 bg-white/30 dark:bg-white/5" id="about">
           <div class="mx-auto max-w-6xl px-6">
             <div class="max-w-3xl">
-              <h2 class="text-4xl font-serif italic mb-6">Sobre mí</h2>
-              <p class="text-lg text-slate-700 leading-relaxed mb-8">
+              <h2 class="text-4xl font-serif italic mb-6 text-slate-900 dark:text-white">
+                Sobre mí
+              </h2>
+              <p
+                class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8"
+              >
                 Ingeniera de telecomunicaciones y desarrolladora especializada
                 en automatización de procesos, integración de APIs y creación
                 de agentes basados en inteligencia artificial. Construyo
@@ -208,9 +235,10 @@
                     class="material-symbols-outlined text-primary text-3xl mb-3 block"
                     >router</span
                   >
-                  <h3 class="font-bold mb-2">Automatización</h3>
-                  <p class="text-sm text-slate-600">
-                    Optimización de procesos complejos con workflows inteligentes.
+                  <h3 class="font-bold mb-2 dark:text-white">Automatización</h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
+                    Optimización de procesos complejos con workflows
+                    inteligentes.
                   </p>
                 </div>
                 <div class="p-6 glass rounded-2xl">
@@ -218,8 +246,8 @@
                     class="material-symbols-outlined text-primary text-3xl mb-3 block"
                     >psychology</span
                   >
-                  <h3 class="font-bold mb-2">Agentes IA</h3>
-                  <p class="text-sm text-slate-600">
+                  <h3 class="font-bold mb-2 dark:text-white">Agentes IA</h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
                     LLMs y flujos generativos autónomos.
                   </p>
                 </div>
@@ -228,8 +256,10 @@
                     class="material-symbols-outlined text-primary text-3xl mb-3 block"
                     >hub</span
                   >
-                  <h3 class="font-bold mb-2">Integración APIs</h3>
-                  <p class="text-sm text-slate-600">
+                  <h3 class="font-bold mb-2 dark:text-white">
+                    Integración APIs
+                  </h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
                     Conexión fluida entre servicios SaaS.
                   </p>
                 </div>
@@ -238,8 +268,8 @@
                     class="material-symbols-outlined text-primary text-3xl mb-3 block"
                     >terminal</span
                   >
-                  <h3 class="font-bold mb-2">Web Moderna</h3>
-                  <p class="text-sm text-slate-600">
+                  <h3 class="font-bold mb-2 dark:text-white">Web Moderna</h3>
+                  <p class="text-sm text-slate-600 dark:text-slate-400">
                     Desarrollo Frontend con Next.js y React.
                   </p>
                 </div>
@@ -251,15 +281,18 @@
         <!-- Selected Works Section -->
         <section class="py-24" id="projects">
           <div class="mx-auto max-w-6xl px-6">
-            <div class="flex justify-between items-end mb-16">
+            <div class="flex justify-between items-end mb-16 flex-col md:flex-row gap-4">
               <div>
-                <h2 class="text-5xl font-serif italic mb-4">Selected Works</h2>
-                <p class="text-slate-500">
+                <h2 class="text-5xl font-serif italic mb-4 text-slate-900 dark:text-white">
+                  Selected Works
+                </h2>
+                <p class="text-slate-500 dark:text-slate-400">
                   Proyectos destacados en automatización inteligente.
                 </p>
               </div>
               <div class="hidden md:block">
-                <span class="material-symbols-outlined text-slate-300 text-6xl"
+                <span
+                  class="material-symbols-outlined text-slate-300 dark:text-slate-700 text-6xl"
                   >arrow_right_alt</span
                 >
               </div>
@@ -280,8 +313,12 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2">AI Knowledge Pipeline</h3>
-                  <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                    AI Knowledge Pipeline
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed"
+                  >
                     Sistema automatizado capaz de recibir audio, PDFs, vídeos o
                     texto. Transcribe el contenido, lo resume mediante IA y lo
                     almacena estructuradamente para su reutilización.
@@ -318,8 +355,12 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2">ChefGPT</h3>
-                  <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
+                    ChefGPT
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed"
+                  >
                     Agente conversacional que sugiere recetas en función de los
                     ingredientes disponibles. Integra Telegram, Google Sheets y
                     n8n para automatizar consultas de inventario.
@@ -356,10 +397,12 @@
                   ></div>
                 </div>
                 <div class="p-8">
-                  <h3 class="text-xl font-bold mb-2">
+                  <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
                     Content Processing Automation
                   </h3>
-                  <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed"
+                  >
                     Pipeline automatizado para procesar contenido multimedia
                     (audio, PDFs, vídeos, texto) que genera transcripciones,
                     resúmenes y conocimiento estructurado.
@@ -386,81 +429,95 @@
 
         <!-- Tech Stack Section -->
         <section class="py-24 relative" id="stack">
-          <div class="absolute inset-0 bg-primary/[0.03] skew-y-3 -z-10"></div>
+          <div
+            class="absolute inset-0 bg-primary/[0.03] dark:bg-primary/[0.02] skew-y-3 -z-10"
+          ></div>
           <div class="mx-auto max-w-4xl px-6 text-center">
-            <h2 class="text-4xl font-serif italic mb-16">Tech Curated Stack</h2>
+            <h2 class="text-4xl font-serif italic mb-16 text-slate-900 dark:text-white">
+              Tech Curated Stack
+            </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div class="flex flex-col items-center gap-4 group">
                 <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
                   <span class="material-symbols-outlined text-3xl">hub</span>
                 </div>
-                <span class="font-medium text-slate-700">n8n</span>
-              </div>
-              <div class="flex flex-col items-center gap-4 group">
-                <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >n8n</span
                 >
-                  <span class="material-symbols-outlined text-3xl"
-                    >terminal</span
-                  >
-                </div>
-                <span class="font-medium text-slate-700">Next.js</span>
               </div>
               <div class="flex flex-col items-center gap-4 group">
                 <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
+                >
+                  <span class="material-symbols-outlined text-3xl">terminal</span>
+                </div>
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >Next.js</span
+                >
+              </div>
+              <div class="flex flex-col items-center gap-4 group">
+                <div
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
                   <span class="material-symbols-outlined text-3xl">code</span>
                 </div>
-                <span class="font-medium text-slate-700">JavaScript</span>
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >JavaScript</span
+                >
               </div>
               <div class="flex flex-col items-center gap-4 group">
                 <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
                   <span class="material-symbols-outlined text-3xl"
                     >model_training</span
                   >
                 </div>
-                <span class="font-medium text-slate-700">LLMs</span>
-              </div>
-              <div class="flex flex-col items-center gap-4 group">
-                <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >LLMs</span
                 >
-                  <span class="material-symbols-outlined text-3xl"
-                    >database</span
-                  >
-                </div>
-                <span class="font-medium text-slate-700">Supabase</span>
               </div>
               <div class="flex flex-col items-center gap-4 group">
                 <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
+                >
+                  <span class="material-symbols-outlined text-3xl">database</span>
+                </div>
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >Supabase</span
+                >
+              </div>
+              <div class="flex flex-col items-center gap-4 group">
+                <div
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
                   <span class="material-symbols-outlined text-3xl">api</span>
                 </div>
-                <span class="font-medium text-slate-700">APIs</span>
-              </div>
-              <div class="flex flex-col items-center gap-4 group">
-                <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >APIs</span
                 >
-                  <span class="material-symbols-outlined text-3xl"
-                    >palette</span
-                  >
-                </div>
-                <span class="font-medium text-slate-700">Tailwind CSS</span>
               </div>
               <div class="flex flex-col items-center gap-4 group">
                 <div
-                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner"
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
+                >
+                  <span class="material-symbols-outlined text-3xl">palette</span>
+                </div>
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <div class="flex flex-col items-center gap-4 group">
+                <div
+                  class="size-16 glass rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-inner text-slate-700 dark:text-slate-300"
                 >
                   <span class="material-symbols-outlined text-3xl">chat</span>
                 </div>
-                <span class="font-medium text-slate-700">TypeScript</span>
+                <span class="font-medium text-slate-700 dark:text-slate-300"
+                  >TypeScript</span
+                >
               </div>
             </div>
           </div>
@@ -473,27 +530,26 @@
               class="glass rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden"
             >
               <div class="absolute top-0 right-0 p-8">
-                <span class="material-symbols-outlined text-primary/20 text-9xl"
+                <span
+                  class="material-symbols-outlined text-primary/20 dark:text-primary/10 text-9xl"
                   >alternate_email</span
                 >
               </div>
               <h2
-                class="text-5xl md:text-7xl font-serif italic mb-8 relative z-10"
+                class="text-5xl md:text-7xl font-serif italic mb-8 relative z-10 text-slate-900 dark:text-white"
               >
                 ¿Creamos algo<br />extraordinario?
               </h2>
               <p
-                class="text-xl text-slate-600 mb-12 max-w-xl mx-auto relative z-10"
+                class="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-xl mx-auto relative z-10"
               >
                 Estoy siempre abierta a colaborar en proyectos que desafíen los
                 límites de lo posible con IA y automatización.
               </p>
-              <div
-                class="flex flex-col md:flex-row justify-center gap-6 relative z-10"
-              >
+              <div class="flex flex-col md:flex-row justify-center gap-6 relative z-10">
                 <a
-                  class="bg-slate-900 text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 transition-colors shadow-2xl"
-                  href="mailto:itziar.zameza.dev@gmail.com"
+                  class="bg-slate-900 dark:bg-slate-800 text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-slate-800 dark:hover:bg-slate-700 transition-colors shadow-2xl"
+                  href="mailto:itziar@example.com"
                 >
                   <span class="material-symbols-outlined">mail</span>
                   Enviar un Email
@@ -511,26 +567,24 @@
                     href="#"
                     title="GitHub"
                   >
-                    <span class="material-symbols-outlined text-2xl"
-                      >share</span
-                    >
+                    <span class="material-symbols-outlined text-2xl">share</span>
                   </a>
                 </div>
               </div>
             </div>
             <div
-              class="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm"
+              class="mt-16 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 dark:text-slate-500 text-sm"
             >
-              <p>© 2025 Itziar ZG. Hecho con IA y mucho café.</p>
+              <p>© 2024 Itziar ZG. Hecho con IA y mucho café.</p>
               <div class="flex gap-8">
                 <a
-                  class="hover:text-primary transition-colors"
-                  href="https://www.linkedin.com/in/itziarzamezagarcia"
+                  class="hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
+                  href="#"
                   >LinkedIn</a
                 >
                 <a
-                  class="hover:text-primary transition-colors"
-                  href="https://github.com/itziarZG"
+                  class="hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
+                  href="#"
                   >GitHub</a
                 >
               </div>
@@ -542,35 +596,45 @@
 
     <!-- Scripts -->
     <script>
-      // Smooth scrolling
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
-
-      // Contact button functionality
-      document
-        .querySelector(".bg-primary")
-        .addEventListener("click", function () {
-          const contactSection = document.getElementById("contact");
-          if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-
-      // Load saved theme
-      const savedTheme = localStorage.getItem("theme");
-      const systemPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
-        document.documentElement.classList.add("dark");
+      // Load saved theme on page load
+      function initTheme() {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
       }
+
+      // Toggle theme and save preference
+      function toggleTheme() {
+        const html = document.documentElement;
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          html.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Smooth scrolling to sections
+      function scrollToProjects() {
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+          projectsSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      function scrollToContact() {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Initialize theme on page load
+      document.addEventListener("DOMContentLoaded", initTheme);
     </script>
   </body>
 </html>
