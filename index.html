@@ -4,15 +4,6 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Itziar ZG | AI &amp; Automation Developer</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -37,6 +28,15 @@
         },
       };
     </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body
@@ -281,7 +281,7 @@
                 <div class="aspect-video relative overflow-hidden">
                   <img
                     class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
-                    data-alt="Visualization of an AI neural network and data pipeline"
+                    alt="Visualization of an AI neural network and data pipeline"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8RWItHd5HSWHY1TZGhviEiYL0nH49aw4shoKawpqU6-sXM8PS5yl17suDdKzrYINIOcJ6UMBjTl-c66Ul8JUBHK9PNN0cXxr_1selPrAOi0plM8CipkLw1D-0QUKa05GZg7AzHFCCYWLdicp0_M6TMYPWiEu7cdxASk_G9GTfhUXkNQKjFA0qrxqtqdDAzG-gpLV-XOs7L3hELHIUam_iE_0w4i5DNlONlsACvbS5kTTDB7FOFb7SAMKe0VH_9c5J3F0eQyyjokw"
                   />
                   <div
@@ -612,6 +612,9 @@
     <div
       id="project-1-modal"
       class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-1-modal-title"
       onclick="closeModal('project-1')"
     >
       <div
@@ -621,6 +624,7 @@
         <div class="p-8 md:p-12">
           <div class="flex justify-between items-start mb-6">
             <h2
+              id="project-1-modal-title"
               class="text-3xl font-serif italic text-slate-900 dark:text-white"
             >
               AI Knowledge Pipeline
@@ -628,6 +632,7 @@
             <button
               class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               onclick="closeModal('project-1')"
+              aria-label="Close dialog"
             >
               ✕
             </button>
@@ -718,6 +723,9 @@
     <div
       id="project-2-modal"
       class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-2-modal-title"
       onclick="closeModal('project-2')"
     >
       <div
@@ -727,6 +735,7 @@
         <div class="p-8 md:p-12">
           <div class="flex justify-between items-start mb-6">
             <h2
+              id="project-2-modal-title"
               class="text-3xl font-serif italic text-slate-900 dark:text-white"
             >
               ChefGPT
@@ -734,6 +743,7 @@
             <button
               class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               onclick="closeModal('project-2')"
+              aria-label="Close dialog"
             >
               ✕
             </button>
@@ -832,6 +842,9 @@
     <div
       id="project-3-modal"
       class="hidden fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="project-3-modal-title"
       onclick="closeModal('project-3')"
     >
       <div
@@ -841,6 +854,7 @@
         <div class="p-8 md:p-12">
           <div class="flex justify-between items-start mb-6">
             <h2
+              id="project-3-modal-title"
               class="text-3xl font-serif italic text-slate-900 dark:text-white"
             >
               Content Processing Automation
@@ -848,6 +862,7 @@
             <button
               class="text-2xl text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               onclick="closeModal('project-3')"
+              aria-label="Close dialog"
             >
               ✕
             </button>
