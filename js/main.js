@@ -58,20 +58,37 @@ function scrollToContact() {
 // Modal Management
 // ============================================
 
+/** Element that had focus before a modal was opened */
+let _modalPreviousFocus = null;
+
 /**
- * Open modal by project ID
+ * Open modal by project ID.
+ * Saves the currently focused element and moves focus into the modal.
  * @param {string} projectId - The project identifier
  */
 function openModal(projectId) {
   const modal = document.getElementById(projectId + "-modal");
   if (modal) {
+    _modalPreviousFocus = document.activeElement;
     modal.classList.remove("hidden");
     document.body.style.overflow = "hidden";
+
+    // Move focus to the first focusable element inside the modal
+    const focusable = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [contenteditable="true"], [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length > 0) {
+      focusable[0].focus();
+    } else {
+      modal.setAttribute("tabindex", "-1");
+      modal.focus();
+    }
   }
 }
 
 /**
- * Close modal by project ID
+ * Close modal by project ID.
+ * Restores focus to the element that was focused before the modal opened.
  * @param {string} projectId - The project identifier
  */
 function closeModal(projectId) {
@@ -79,6 +96,12 @@ function closeModal(projectId) {
   if (modal) {
     modal.classList.add("hidden");
     document.body.style.overflow = "auto";
+
+    // Return focus to the element that triggered the modal
+    if (_modalPreviousFocus) {
+      _modalPreviousFocus.focus();
+      _modalPreviousFocus = null;
+    }
   }
 }
 
