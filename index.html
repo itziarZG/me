@@ -192,6 +192,7 @@
               Explorar Proyectos
             </button>
             <button
+              disabled
               class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/60 dark:hover:bg-white/10 transition-colors text-slate-800 dark:text-slate-200"
             >
               Descargar CV
@@ -229,8 +230,8 @@
                 Ingeniera de telecomunicaciones y desarrolladora especializada
                 en automatización de procesos, integración de APIs y creación de
                 agentes basados en inteligencia artificial. Construyo sistemas
-                que conectan herramientas, procesan información (texto, audio,
-                vídeo) y crean flujos automatizados que reducen trabajo manual.
+                que conectan herramientas, procesan información y crean flujos
+                automatizados que reducen trabajo manual.
               </p>
               <div class="grid md:grid-cols-2 gap-4 mt-12">
                 <div class="p-6 glass rounded-2xl">
@@ -406,7 +407,7 @@
               </div>
 
               <!-- Project 3: Content Processing Automation -->
-              <div
+              <!-- <div
                 class="group relative flex flex-col glass rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-500"
               >
                 <div class="aspect-video relative overflow-hidden">
@@ -453,7 +454,7 @@
                     Ver detalles
                   </button>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </section>
@@ -632,10 +633,10 @@
                 >
               </div>
             </div>
-           </div>
-         </footer>
-       </div>
-     </div>
+          </div>
+        </footer>
+      </div>
+    </div>
 
     <!-- Project Modals -->
     <!-- Modal 1: AI Knowledge Pipeline -->
@@ -687,7 +688,9 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
                 Funcionalidades
               </h3>
-              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+              <ul
+                class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300"
+              >
                 <li>Ingestión de múltiples tipos de contenido</li>
                 <li>Transcripción automática con IA</li>
                 <li>Resumen inteligente y extracción de keywords</li>
@@ -780,9 +783,10 @@
               </h3>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
                 Agente conversacional inteligente en Telegram que actúa como
-                asistente culinario personal. Consulta tu inventario en Google
-                Sheets, entiende tus preferencias dietéticas y sugiere recetas
-                personalizadas basadas en lo que tienes disponible.
+                asistente culinario personal. Consulta tu inventario en Supabase,
+                accede a un RAG especializado con recetas para evitar
+                alucinaciones, y sugiere platos personalizados basados en lo que
+                tienes disponible.
               </p>
             </div>
 
@@ -790,10 +794,14 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
                 Funcionalidades
               </h3>
-              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
-                <li>Integración bidireccional con Google Sheets</li>
-                <li>Consulta automática de inventario</li>
-                <li>Generación de recetas personalizadas con IA</li>
+              <ul
+                class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300"
+              >
+                <li>Integración bidireccional con Supabase</li>
+                <li>Consulta automática de inventario en base de datos</li>
+                <li>RAG (Retrieval-Augmented Generation) con recetas verificadas</li>
+                <li>Prevención de alucinaciones mediante fine-tuning de prompts</li>
+                <li>Generación de recetas personalizadas sin alucinar</li>
                 <li>Actualización automática del inventario</li>
                 <li>Conversación natural y contextual</li>
               </ul>
@@ -810,15 +818,19 @@
                 >
                 <span
                   class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
-                  >Google Sheets API</span
+                  >Supabase (PostgreSQL)</span
                 >
                 <span
                   class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
-                  >n8n</span
+                  >RAG (Retrieval)</span
                 >
                 <span
                   class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
                   >OpenAI GPT</span
+                >
+                <span
+                  class="px-4 py-2 bg-primary/10 rounded-full text-sm font-bold text-primary"
+                  >n8n</span
                 >
               </div>
             </div>
@@ -828,9 +840,11 @@
                 Resultado
               </h3>
               <p class="text-slate-700 dark:text-slate-300">
-                Asistente culinario que elimina la decisión de "qué cocinar",
-                aprendiendo preferencias y generando sugerencias en tiempo real
-                basadas en disponibilidad real del inventario.
+                Asistente culinario robusto que elimina la decisión de "qué
+                cocinar" sin generar recetas inexistentes. El RAG garantiza que
+                todas las sugerencias provienen de un corpus de recetas
+                verificadas, proporcionando fiabilidad y personalización sin
+                alucinaciones de la IA.
               </p>
             </div>
           </div>
@@ -893,7 +907,9 @@
               <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
                 Funcionalidades
               </h3>
-              <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+              <ul
+                class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300"
+              >
                 <li>Procesamiento de múltiples formatos multimedia</li>
                 <li>Transcripción y análisis automático</li>
                 <li>Generación de títulos, descripciones y hashtags con IA</li>
@@ -931,9 +947,9 @@
                 Resultado
               </h3>
               <p class="text-slate-700 dark:text-slate-300">
-                Automatización completa de la cadena de producción de
-                contenido, reduciendo tiempo manual en un 90% y garantizando
-                consistencia en la calidad y el formato de publicaciones.
+                Automatización completa de la cadena de producción de contenido,
+                reduciendo tiempo manual en un 90% y garantizando consistencia
+                en la calidad y el formato de publicaciones.
               </p>
             </div>
           </div>
@@ -980,45 +996,45 @@
         }
       }
 
-       function scrollToContact() {
-         const contactSection = document.getElementById("contact");
-         if (contactSection) {
-           contactSection.scrollIntoView({ behavior: "smooth" });
-         }
-       }
+      function scrollToContact() {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
 
-       // Modal functions
-       function openModal(projectId) {
-         const modal = document.getElementById(projectId + "-modal");
-         if (modal) {
-           modal.classList.remove("hidden");
-           document.body.style.overflow = "hidden";
-         }
-       }
+      // Modal functions
+      function openModal(projectId) {
+        const modal = document.getElementById(projectId + "-modal");
+        if (modal) {
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        }
+      }
 
-       function closeModal(projectId) {
-         const modal = document.getElementById(projectId + "-modal");
-         if (modal) {
-           modal.classList.add("hidden");
-           document.body.style.overflow = "auto";
-         }
-       }
+      function closeModal(projectId) {
+        const modal = document.getElementById(projectId + "-modal");
+        if (modal) {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      }
 
-       // Close modal with ESC key
-       document.addEventListener("keydown", function (event) {
-         if (event.key === "Escape") {
-           const modals = document.querySelectorAll(
-             '[id$="-modal"]:not(.hidden)'
-           );
-           modals.forEach((modal) => {
-             const projectId = modal.id.replace("-modal", "");
-             closeModal(projectId);
-           });
-         }
-       });
+      // Close modal with ESC key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          const modals = document.querySelectorAll(
+            '[id$="-modal"]:not(.hidden)',
+          );
+          modals.forEach((modal) => {
+            const projectId = modal.id.replace("-modal", "");
+            closeModal(projectId);
+          });
+        }
+      });
 
-       // Initialize theme on page load
-       document.addEventListener("DOMContentLoaded", initTheme);
+      // Initialize theme on page load
+      document.addEventListener("DOMContentLoaded", initTheme);
     </script>
   </body>
 </html>
